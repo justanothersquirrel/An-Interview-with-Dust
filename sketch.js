@@ -89,7 +89,7 @@ const Z4_CX = 240,
 //!__________________________________________________________ Preload
 function preload() {
   for (let i = 0; i < numTracks; i++) {
-    tracks[i] = loadSound("audio-assets/" + i + ".mp3");
+    tracks[i] = loadSound("audio-assets/" + nf(i, 2) + ".mp3");
   }
 }
 
