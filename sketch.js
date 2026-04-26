@@ -500,7 +500,7 @@ function playNextC() {
 }
 function playNextD() {
   clearTrackD();
-  activeD = floor(random(36, 44)); // Tracks 36 to 43
+  activeD = floor(random(36, 43)); // Tracks 36 to 43
   tracks[activeD].play();
   tracks[activeD].onended(function () {
     timeoutD = setTimeout(function () {
