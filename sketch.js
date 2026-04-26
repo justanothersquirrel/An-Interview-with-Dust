@@ -468,18 +468,18 @@ function clearTrackD() {
 function playNextA() {
   clearTrackA(); //This helps avoiding track playing overlap.
   if (stateA === "dimmed") {
-    activeA = floor(random(0, 9)); //random picking from 0-9 floor takes decimel out
+    activeA = floor(random(00, 09)); //random picking from 0-9 floor takes decimel out
   } else {
-    activeA = floor(random(9, 18));
+    activeA = floor(random(09, 018));
   }
   tracks[activeA].setLoop(true); // When it gets dark, repeat continuesly until the system decides to swithc to next track
 }
 function playNextB() {
   clearTrackB();
   if (stateB === "decay") {
-    activeB = floor(random(18, 24));
+    activeB = floor(random(018, 024));
   } else {
-    activeB = floor(random(24, 28));
+    activeB = floor(random(024, 028));
   }
   tracks[activeB].play();
   tracks[activeB].onended(function () {
@@ -490,7 +490,7 @@ function playNextB() {
 }
 function playNextC() {
   clearTrackC();
-  activeC = floor(random(28, 36)); // Tracks 28 to 35
+  activeC = floor(random(028, 036)); // Tracks 28 to 35
   tracks[activeC].play();
   tracks[activeC].onended(function () {
     timeoutC = setTimeout(function () {
@@ -500,7 +500,7 @@ function playNextC() {
 }
 function playNextD() {
   clearTrackD();
-  activeD = floor(random(36, 44)); // Tracks 36 to 43
+  activeD = floor(random(036, 044)); // Tracks 36 to 43
   tracks[activeD].play();
   tracks[activeD].onended(function () {
     timeoutD = setTimeout(function () {
